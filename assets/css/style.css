@@ -47,7 +47,7 @@ header h1{
     margin-top:100px;
     text-shadow: 2px 4px 6px var(--contrastingcolor);
 }
-/*This puts emphasis on the first letter of the heading (The first-letter of my name)*/
+/*This pseudo-element puts emphasis on the first letter of the heading (The first-letter of my name)*/
 header h1::first-letter{
     font-size: 4rem;
     font-family: cursive;
@@ -127,7 +127,7 @@ section  div{
     float:right;
     background-color: var(--contrastingcolor);
     color:lightgray;
-    width=75%;
+    width:75%;
 }
 /* Specifies the % of the viewport that will be taken by the width of the figure area corresponding to the main project*/
 #main_figure{
@@ -174,15 +174,59 @@ footer a{
 footer a:hover{
     text-decoration: underline wavy var(--darkest);
 }
-/*These media queries add responsiveness to the screen so that the contents are understandable in devices with different viewports*/
-@media screen and (max-width:1200px){
+/*These media queries add some very elementary responsiveness to the screen so that the contents are understandable in devices with different viewports*/
+@media screen and (max-width:1074px){
+    header figure{
+    width:15%;
+}
+        header figure img{
+    width:75%;
+    height:75%;
+    border-radius: 75%;
+}
+            header figure figcaption{
+    font-size:75%;
+}
+
+    header h1{
+    font-size:1rem;
+}
+        header h1::first-letter{
+    font-size:2rem;
+}
     
+    header nav{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+}
+    section h2{
+    font-size:2rem;
 }
 
-@media screen and (min-width:768px){
-
 }
 
-@media screen and (min-width:320px){
-
+@media screen and (max-width:625px){
+    
+    header h1{
+        font-size:.75rem;
+    }
+        header h1::first-letter{
+        font-size:1.75rem;
+    }    
+    section h2{
+        font-size:1.5rem;
+    }
+}
+@media screen and (max-width:465px){
+    
+    header h1{
+        font-size:.5rem;
+    }
+        header h1::first-letter{
+        font-size:1.5rem;
+    }    
+    section h2{
+        font-size:1rem;
+    }
 }
