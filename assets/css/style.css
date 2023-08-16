@@ -102,7 +102,7 @@ section h2{
     border-right: 5px dashed var(--darkest);
 }
 /*Formatting of each of the paragraphs that appear in each of the sections of the main section. NB: one of the sessions is called  "work_box"*/
-section p, work_box p{
+section p, #work_box p{
     background-color: var(--light);
     color:darkslateblue;
     text-align: justify;
@@ -114,6 +114,16 @@ section p, work_box p{
 #work_box{
     display:flex;
     flex-direction:column;
+}
+/* Class selectors offer contrasting backgrounds and different text-alignments for the <figcaption> elements, improving legibility*/
+.main, .left {
+
+    background-color: var(--dark);;
+
+}
+
+.right{
+    text-align: right;
 }
 /*Stipulates that each of the division subsections within the "work_box" section of the main area will be a flexbox with the following properties*/
 section  div{
