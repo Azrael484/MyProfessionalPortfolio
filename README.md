@@ -7,9 +7,13 @@ The static Web page (URL: https://jguemarez.github.io/MyProfessionalPortfolio/#W
 for a little bit of responsiveness to variations of screen size.
 ## Usage
 The structure of the website is very simple and intuitive. On the right-hand side of the header you will find a navigation bar with links to each of the main areas of the page, each one having a self-explenatory title:
-![Alt text](image.png)
+
+![Header of the professional portfolio](assets/images/image.png)
+
 The most important section is the one title "Work":
-![Alt text](image-1.png)
+
+![The section that displays my best work so far](assets/images/image-1.png)
+
 There you will find a sample of my best work so far. Each of the images link to the deployed Web page of the chosen project. 
 The next section offers up my cellphone numbers and my e-mail address for any comments
 or inquiries.
