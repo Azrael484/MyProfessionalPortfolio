@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
-        <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-        <title>J. Maldonado's Professional Portfolio</title>  
-    </head>
-    <body>
-        <header id="header">
-            <figure>
-                <img src="assets\images\hypercube-graph.png" alt="The projection of a hypercube in the Euclidean plane"/>
-                <figcaption>Ad Astra Per Aspera</figcaption>
-            </figure>
-            <h1>J. Maldonado</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <title>J. Maldonado's Professional Portfolio</title>
+</head>
+
+<body>
+    <header style="display:flex; justify-content: space-between;">
+        <div id="presentation" style="display: inline-block;">
+            <div id="figure" style="display:inline-block;">
+                <figure>
+                    <img src="assets\images\hypercube-graph.png"
+                        alt="The projection of a hypercube in the Euclidean plane" />
+                    <figcaption>Ad Astra Per Aspera</figcaption>
+                </figure>
+            </div>
+            <div id="header" style="display:inline-block; margin-left:auto; margin-right: auto;">
+                <h1><span>J.</span> Maldonado</h1>
+            </div>
+        </div>
+        <div id="navigation" style="display: inline-block; margin-top: 100px; margin-right:100px;">
             <nav>
                 <li>
                     <a href=#aboutMe>About Me</a>
@@ -25,73 +35,114 @@
                     <a href=#contactMe>Contact Me</a>
                 </li>
             </nav>
-        </header>
-        <main>
-            <section>
-                <h2 id="aboutMe">About Me</h2>
-                <p>     My name is Jonathan Maldonado Guemarez. I was born in Puerto Rico, where I studied pure mathematics in college. Since then I have done various jobs, 
-                    mostly having to do with landscaping and pressure washing. I enrolled in the Full-Stack Coding Bootcamp at Rutgers University looking to change careers
-                    and possibly find a job(s) as a Web developer. This portfolio will be kept updated with examples that showcase my best work. Feel free to contact me using 
+        </div>
+    </header>
+    <main>
+        <section id="personal" style="width: 100%;">
+            <!--style = "display: flex; flex-direction:row; justify-content: space-between;"-->
+            <div style="display:inline-block; width:25%;">
+                <h2 id="aboutMe" style="width: 100%;">About Me</h2>
+            </div>
+            <div style="display:inline-block; width:75%; border-left: 5px dashed black;">
+                <p style="width: 100%;"> My name is Jonathan Maldonado Guemarez. I was born in Puerto Rico, where I
+                    studied pure mathematics
+                    in
+                    college. Since then I have done various jobs,
+                    mostly having to do with landscaping and pressure washing. I enrolled in the Full-Stack Coding
+                    Bootcamp
+                    at Rutgers University looking to change careers
+                    and possibly find a job(s) as a Web developer. This portfolio will be kept updated with examples
+                    that
+                    showcase my best work. Feel free to contact me using
                     the information provided.
                 </p>
-            </section>
-            <section id="work_box">
+            </div>
+        </section>
+        <section id="work_box" style="width: 100%;">
+            <div style="display:inline-block; width:25%;">
+                <h2 id="Work" style="width: 100%;">Work</h2>
+            </div>
+            <div style="display:inline-block; width:75%; border-left: 5px dashed black;">
+                <p id=" work" style="width: 100%;"> Here is a carefully chosen selection of projects I have worked on
+                that reflect the state
+                of my abilities so far using HTML, CSS, and JavaScript for front-end
+                Web development.
+                </p>
+            </div>
+        </section>
+        <section id ="works">
+            <div id="works">
                 <div>
-                    <h2 id="Work">Work</h2>
-                    <p id="work">     Here is a carefully chosen selection of projects I have worked on that reflect the state of my abilities so far using HTML, CSS, and JavaScript for front-end 
-                    Web development.
-                    </p>
-                </div>
-                <div>
-                    <div>
                     <figure id="main_figure">
                         <a href="https://trlivenp.github.io/What_to_Watch/" target="_blank" rel="noreferrer noopener">
-                            <img id="main_project" src="./assets/images/WhatToWatch.png" alt="First project for the Rutgers Coding Bootcamp"/>
+                            <img id="main_project" src="./assets/images/WhatToWatch.png"
+                                alt="First project for the Rutgers Coding Bootcamp" />
                         </a>
-                        <figcaption class ="main">First project done during Bootcamp. Using server side APIs it allows the user to search movies by genere, look streaming availability, and concoct a list of favorites.</figcaption>
+                        <figcaption class="main">First project done during Bootcamp. Using server side APIs it allows
+                            the user to search movies by genere, look streaming availability, and concoct a list of
+                            favorites.</figcaption>
                     </figure>
-                    </div>
-                    <div >
-                        <figure class="other_figure">
-                            <a href="https://jguemarez.github.io/RandomPasswordGen/" target="_blank" rel="noreferrer noopener">
-                                <img class="other_project" src="./assets/images/RandomPasswordGenerator.png" alt="Challenge 3 Landing Page"/>
-                            </a>
-                            <figcaption class = "left">An App that allows the user to effortlessly genrate a random password of the desired length and with user-given character types. </figcaption>
-                        </figure>
-                        <figure class="other_figure">
-                            <a href="https://jguemarez.github.io/WebDevQuiz/" target="_blank" rel="noreferrer noopener">
-                                <img class="other_project" src="./assets/images/WebDevQuiz.png" alt="Challenge 4 Landing Page"/>
-                            </a>
-                            <figcaption class ="right">An App that helps the user to review basic notions of git Bash, HTML, CSS, and Javascript by taking a timed quiz.</figcaption>
-                        </figure>
-                    </div>
-                    <div>
-                        <figure class="other_figure">
-                            <a href="https://jguemarez.github.io/WorkDayApp/" target="_blank" rel="noreferrer noopener">
-                                <img class="other_project" src="./assets/images/WorkDayScheduler.png" alt="Challenge 5 Landing Page"/>
-                            </a>
-                            <figcaption class = "left">An App that helps the user to organize his/her working schedule, keeping track of what had to be done, what has to be done, and what will have to be done.</figcaption>
-                        </figure>
-                        <figure class="other_figure">
-                            <a href="https://jguemarez.github.io/WeatherDashApp/" target="_blank" rel="noreferrer noopener">
-                                <img class="other_project" src="./assets/images/WeatherDashboardApp.png" alt="Challenge 6 Landing Page"/>
-                            </a>
-                            <figcaption class = "right">An App that helps the user to decide what city to visit and what to day during each day of the visit based on current and futures weather conditions.</figcaption>
-                        </figure>
-                    </div>
                 </div>
-            </section>
-            <section>
-                <h2 id="contactMe">Contact</h2>
-                <p>In order to contact me, feel free to call me at <em>&#128241;1-787-689-6920</em>. Alternatively, email me at
-                   <br>
-                   <em>&#128231;<a href="mailto:cantor.dedekind112358@gmail.com">cantor.dedekind112358@gmail.com</a></em>.</p>
-               
-            </section>
-        </main>
-        <footer>
-            <p>&copy; Jonathan Maldonado's Productions 2023</p>
-            <a href=#header>Go back to the top</a>
-        </footer>
-    </body>
+                <div>
+                    <figure class="other_figure">
+                        <a href="https://jguemarez.github.io/RandomPasswordGen/" target="_blank" rel="noreferrer noopener">
+                            <img class="other_project" src="./assets/images/RandomPasswordGenerator.png"
+                                alt="Challenge 3 Landing Page" />
+                        </a>
+                        <figcaption class="left">An App that allows the user to effortlessly genrate a random password
+                            of the desired length and with user-given character types. </figcaption>
+                    </figure>
+                    <figure class="other_figure">
+                        <a href="https://jguemarez.github.io/WebDevQuiz/" target="_blank" rel="noreferrer noopener">
+                            <img class="other_project" src="./assets/images/WebDevQuiz.png"
+                                alt="Challenge 4 Landing Page" />
+                        </a>
+                        <figcaption class="right">An App that helps the user to review basic notions of git Bash, HTML,
+                            CSS, and Javascript by taking a timed quiz.</figcaption>
+                    </figure>
+                </div>
+                <div >
+                    <figure class="other_figure">
+                        <a href="https://jguemarez.github.io/WorkDayApp/" target="_blank" rel="noreferrer noopener">
+                            <img class="other_project" src="./assets/images/WorkDayScheduler.png"
+                                alt="Challenge 5 Landing Page" />
+                        </a>
+                        <figcaption class="left">An App that helps the user to organize his/her working schedule,
+                            keeping track of what had to be done, what has to be done, and what will have to be done.
+                        </figcaption>
+                    </figure>
+                    <figure class="other_figure">
+                        <a href="https://jguemarez.github.io/WeatherDashApp/" target="_blank" rel="noreferrer noopener">
+                            <img class="other_project" src="./assets/images/WeatherDashboardApp.png"
+                                alt="Challenge 6 Landing Page" />
+                        </a>
+                        <figcaption class="right">An App that helps the user to decide what city to visit and what to
+                            day during each day of the visit based on current and futures weather conditions.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id = "contact" style = "width:100%;">
+            <div style="display:inline-block; width:25%;">
+                <h2 id="contactMe" style = "width: 100%;">Contact</h2>
+            </div>
+            <div style="display:inline-block; width: 75%">
+                <p style = "width: 100%;">In order to contact me, feel free to call me at <em>&#128241;1-787-689-6920</em>. Alternatively,
+                    email me
+                    at
+                    <br>
+                    <em>&#128231;<a
+                            href="mailto:cantor.dedekind112358@gmail.com">cantor.dedekind112358@gmail.com</a></em>.
+                </p>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Jonathan Maldonado's Productions 2023</p>
+        <a href=#header>Go back to the top</a>
+    </footer>
+</body>
+
 </html>

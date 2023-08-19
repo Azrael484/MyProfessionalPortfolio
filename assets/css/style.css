@@ -1,242 +1,368 @@
 /*CSS custom variables for repeating colors within the chosen scheme*/
-:root{
-    --darkest:black;
-    --dark:gray;
-    --light:lightgray;
-    --contrastingcolor:darkslateblue;
+:root {
+    --darkest: black;
+    --dark: gray;
+    --light: lightgray;
+    --contrastingcolor: darkslateblue;
 }
+
 /* Universal selector: changes the value of the specified properties for all the elements to which they apply unless otherwise stated below*/
-*{
-font: normal small-caps normal 20px/2 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+    font: normal small-caps normal 20px/2 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 /*These element selector indicates that the body is a flexbox and that each of its childrens(header, main,footer) will be arranged one on top of each other*/
-body{
-    display:flex;
-    flex-direction:column;
+body {
+    display: flex;
+    flex-direction: column;
 }
+
 /*These element selector indicates that the header (flex item of the body) is a flexbox and that each of its flex-items (figure, heading, navigation bar)
  will be displayed inline as long as there is space in the viewport. Otherwise, the items that don't fit will be aligned in the next line from left to right 
  (default writing-direction) and so on*/
-header{
-    display:inline-flex;
-    flex-wrap: wrap;
-    width:100%;
+header {
+
+    width: 100%;
     background-color: var(--dark);
     border-bottom: 10px dashed var(--darkest);
 }
+
+#presentation {
+    width: 65%;
+    margin-bottom: 0px;
+}
+
+#navigation {
+    width: 35%;
+}
+
 /*Styles the area within the header occupied by the figure*/
-header figure { 
-    float:left;
-    width: 20%;
-    margin:20px 20px 20px 0px;
+#figure {
+    float: left;
+    width: 33%;
+    margin: 20px 20px 20px 0px;
     text-align: center;
 }
+
 /*Establishes the properties of the image associated to the figure area in the header (at left)*/
-header figure img{
+#figure figure img {
     border-radius: 140px;
     border-style: ridge;
     border-width: 10px;
     border-color: var(--dark);
 }
+
 /*Stylizes the heading ("J.Maldonado") within the header, letting visitors know whose portfolio is it*/
-header h1{
-    width: 30%;
-    font-size:3rem;
-    font-weight:bolder;
-    align-items: center;
-    margin-top:100px;
+#header h1 {
+    width: 100%;
+    font-size: 2.0rem;
+    font-weight: bolder;
+    margin-left: 50px;
+    margin-top: 100px;
     text-shadow: 2px 4px 6px var(--contrastingcolor);
 }
+
 /*This pseudo-element puts emphasis on the first letter of the heading (The first-letter of my name)*/
-header h1::first-letter{
-    font-size: 4rem;
+#header h1 span {
+    font-size: 2.5rem;
     font-family: cursive;
     color: var(--contrastingcolor);
     text-shadow: 3px 6px 9px black;
 }
+
 /*Stipulates that the navigation bar within the header is a flexbox where the flex items are arranged in a row in the default writing direction, 
 wrapping them if there is no more space in the given line*/
 header nav {
-    display:inline-flex;
-    flex-wrap: wrap;
-    align-items:center;
-    width:40%;
-    float:right;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 40%;
     list-style: none;
 }
+
 /*Gives the top and left margins for each of the boxes containing the list items of the navigation bar*/
-header nav li{
-    margin-top:50px;
-    margin-left:100px;
+header nav li {
+    margin-top: 50px;
+    margin-left: 100px;
 }
+
 /*Determines the properties of the links within the navigation bar, used to navigate the page without scrolling.*/
-header nav li a{
-    color:black;
+header nav li a {
+    color: black;
     text-decoration: none;
     text-shadow: 1px 2px 3px var(--contrastingcolor);
 }
+
 /*Class selectors that creates changes in each navigation link when the cursor is on top of it*/
-header nav li a:hover{
+header nav li a:hover {
     text-shadow: 2px 4px 6px var(--contrastingcolor);
     text-decoration: underline wavy;
 }
+
 /*This says that the main area is a flexbox with items stacked one on top of the other and with the specified margins*/
-main{
-    display:flex;
-    flex-direction:column;
-    width:100%;
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin-top: 20px;
-    margin-bottom: 20px;
 }
+
 /*Each subsection of the main section that is labeled with a <section> element will be a flexbox of the indicated type*/
-main section{
-    display:inline-flex;
-    flex-wrap:wrap;
-} 
+main section {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
 /*Property values for the headings of each subsection of the main section*/
-section h2{
-    float:left;
-    text-align:center;
-    font-size:3rem;
-    width:25%;
-    border-right: 5px dashed var(--darkest);
+section h2 {
+    float: left;
+    text-align: center;
+    font-size: 3rem;
+    width: 25%;
 }
+
 /*Formatting of each of the paragraphs that appear in each of the sections of the main section. NB: one of the sessions is called  "work_box"*/
-section p, #work_box p{
-    background-color: var(--light);
-    color:darkslateblue;
+
+section p,
+#work_box p {
+
+    color: darkslateblue;
     text-align: justify;
-    width:75%;
+    width: 100%;
     text-indent: 50px;
-    padding:20px;
+    padding: 20px;
+
 }
-/*Determines the flex properties of the "work_box" subsection of the main section*/
-#work_box{
-    display:flex;
-    flex-direction:column;
+
+section p {
+
+    background-color: var(--light);
+
 }
+
+#work_box p {
+
+    background-color: var(--dark);
+
+}
+
+
 /* Class selectors offer contrasting backgrounds and different text-alignments for the <figcaption> elements, improving legibility*/
-.main, .left {
+.main,
+.left {
 
-    background-color: var(--dark);;
+    background-color: var(--dark);
+    
 
 }
 
-.right{
+.right {
     text-align: right;
 }
+
 /*Stipulates that each of the division subsections within the "work_box" section of the main area will be a flexbox with the following properties*/
-section  div{
-    display:inline-flex;
-    flex-wrap:wrap;
+section div {
+    display: inline-flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    width:100%;
+    width: 100%;
 }
+
 /*Gives special formatting to the paragraph element of the "work_box" subsection of the main area*/
-#work{
-    float:right;
+#work {
+    float: right;
     background-color: var(--contrastingcolor);
-    color:lightgray;
-    width:75%;
+    color: lightgray;
+    width: 75%;
 }
+
 /* Specifies the % of the viewport that will be taken by the width of the figure area corresponding to the main project*/
-#main_figure{
-    width:75%;
+#main_figure {
+    width: 75%;
 }
+
 /*Gives the formatting of the image that (together with the associated caption) will cover the figure area corresponding to the main project*/
-#main_project{
-    float:right;
-    width:100%;
-    height:300px;
-    border:5px solid var(--contrastingcolor);
+#main_project {
+    float: right;
+    width: 100%;
+    height: 300px;
+    border: 5px solid var(--contrastingcolor);
 }
+
 /* Specifies the % of the viewport that will be taken by the width of the figure area corresponding to any of the remainding projects*/
-.other_figure{
-    width:37.5%; 
+.other_figure {
+    width: 37.5%;
 }
+
 /*Gives the formatting of the image that (together with the associated caption) will cover the figure area corresponding to any of the remainding project*/
-.other_project{
-    width:100%;
-    height:200px;
-    border:5px solid var(--contrastingcolor);
+.other_project {
+    width: 100%;
+    height: 200px;
+    border: 5px solid var(--contrastingcolor);
 }
+
+#contact p {
+    background-color: var(--light);
+}
+
+#contact p a {
+    color: var(--darkest);
+}
+
+#contact p a:hover {
+
+    text-shadow: 2px 2px 2px var(--contrastingcolor);
+}
+
 /*These selectors add style to the footer area of the body*/
 /*The footer will be a flexbox of the specified type. Its children (the paragraph element with the copyright and the link to go back to the header) will be stacked one over the other*/
-footer{
+footer {
     display: flex;
     flex-direction: column;
     background-color: var(--dark);
 }
+
 /*Formatting for the footer paragraph*/
 footer p {
-    width:100%;
+    width: 100%;
     text-align: center;
     border-top: 5px dashed var(--darkest);
     background-color: inherit;
 }
+
 /*Adds stylishness to the foter's anchor element*/
-footer a{
+footer a {
+    text-align: center;
     text-decoration: none;
-    color:var(--darkest);
+    color: var(--darkest);
     text-shadow: 1px 2px 3px var(--contrastingcolor);
 }
+
 /*This pseudo-class selector determines what happens to anchor element when it is in the "hover" state*/
-footer a:hover{
+footer a:hover {
     text-decoration: underline wavy var(--darkest);
 }
-/*These media queries add some very elementary responsiveness to the screen so that the contents are understandable in devices with different viewports*/
-@media screen and (max-width:1074px){
-    header figure{
-    width:15%;
-}
-        header figure img{
-    width:75%;
-    height:75%;
-    border-radius: 75%;
-}
-            header figure figcaption{
-    font-size:75%;
+
+@media screen and (max-width:1100px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #presentation {
+        width: 60%;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #navigation {
+
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+    }
+
+    #navigation nav {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+
+    #navigation nav li {
+
+        margin-top: 0px;
+    }
+
+    section h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+
 }
 
-    header h1{
-    font-size:1rem;
-}
-        header h1::first-letter{
-    font-size:2rem;
-}
-    
-    header nav{
-    display:flex;
-    flex-direction:column;
-    align-items: flex-start;
-}
-    section h2{
-    font-size:2rem;
-}
+@media screen and (max-width: 890px) {
+
+    #presentation #figure img {
+
+        width: 100%;
+
+    }
+
+    #presentation #header {
+
+        width: 50%;
+    }
+
+    #presentation #header h1 {
+
+        font-size: 1.5rem;
+    }
+
+    #navigation nav {
+
+        width: 60%;
+        margin-left: -30px;
+    }
+
+    section h2 {
+
+        font-size: 1.5rem;
+    }
 
 }
 
-@media screen and (max-width:625px){
-    
-    header h1{
-        font-size:.75rem;
+@media screen and (max-width: 755px) {
+
+    #presentation #header {
+
+        width: 45%;
     }
-        header h1::first-letter{
-        font-size:1.75rem;
-    }    
-    section h2{
-        font-size:1.5rem;
+
+    #presentation #header h1 {
+
+        font-size: 1.25rem;
     }
+
+    #presentation #header h1 span {
+
+        font-size: 1.75rem
+    }
+
 }
-@media screen and (max-width:465px){
+
+@media screen and (max-width: 680px) {
+
+   
+
+    #main_project {
+        width: 100%;
+        height: 300px;
+        border: 5px solid var(--contrastingcolor);
+    }
+
+    #main_figure {
+        width: 100%;
+    }
+
+    .other_figure {
+        width: 100%;
+    }
+
+    #personal div, #work_box div, #contact div{
+
+        display:block;
+        width: 100%;
+    }
+
+
+
     
-    header h1{
-        font-size:.5rem;
-    }
-        header h1::first-letter{
-        font-size:1.5rem;
-    }    
-    section h2{
-        font-size:1rem;
-    }
+
 }
